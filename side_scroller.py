@@ -28,7 +28,7 @@ font = pygame.font.SysFont("Verdana", 45)
 font_small = pygame.font.SysFont("Verdanda", 50)
 
 
-background = pygame.image.load("AnimatedStreet.png")
+background = pygame.image.load("AnimatedGalaxy.png")
 
 #Create a white screen 
 DISPLAYSURF = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
@@ -111,11 +111,11 @@ while True:
  
     #To be run if collision occurs between Player and Enemy
     if pygame.sprite.spritecollideany(P1, enemies):
-          pygame.mixer.Sound('crash.wav').play()
+          pygame.mixer.Sound('crash.mp3').play()
           time.sleep(0.5)
 
           DISPLAYSURF.fill(RED)
-          game_over = font.render("GG's | SCORE:" + str(SCORE), True, BLACK)
+          game_over = font.render("GG | SCORE:" + str(SCORE), True, BLACK)
           DISPLAYSURF.blit(game_over, (30, 250))
 
           pygame.display.update()
